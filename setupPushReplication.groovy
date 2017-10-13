@@ -1,21 +1,17 @@
-input=userInput (
-    name : "User Friendly Name", // Optional
-    type : "ARTIFACTORY", // "BOOLEAN", "INTEGER", "INSTANCE", "XRAY", "ARTIFACTORY", "REPOSITORY", "PACKAGE_TYPE"
-    value : "default value",
-    description : "please provide a value"
-  
-  )
+artifactoryToUserInput = userInput (
+    name : "Input to name artifactory",
+    type : "ARTIFACTORY",
+    description : "please provide a to name artifactory"
+)
 
-artifactory(input) {
-  localRepository('RT1-maven-local') {
-    description userInput
-    notes "Some internal notes"
-    includesPattern "**/*" // default
-    excludesPattern "" // default
-    repoLayoutRef "maven-2-default"
-    propertySets // (["ps1", "ps2"])
-    archiveBrowsingEnabled false
-    blackedOut false // default
-    packageType "maven"
+artifactory(artifactoryToUserInput.name) {
+  localRepository("local-repository-key") {
+    replication(artifactoryToUserInput) {
+      username "admin"
+      password "password"
+	  url http://localhost:8082/artifactory/bower-local
+      cronExp "0 0/9 14 * * ?"
+      socketTimeoutMillis 15000
+    }
   }
 }
