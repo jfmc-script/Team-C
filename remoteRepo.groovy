@@ -11,5 +11,6 @@ remoteRepository ('teamc-generic-remote') {
     url "https://artifactory-edge1-team-c.jfrogdev.co/artifactory/teamc-generic-local"
     username "admin"
     password "password" 
+    packageType "generic"
   }
 }
