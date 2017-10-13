@@ -1,4 +1,5 @@
-repository('remote-repository-key') {
+artifactory("Art-2") { //Enter the source artifactory node
+remoteRepository ('teamc-generic-remote') {
     description "Public description"
     notes "Some internal notes"
     includesPattern "**/*" // default
@@ -7,8 +8,8 @@ repository('remote-repository-key') {
     propertySets // (["ps1", "ps2"])
     archiveBrowsingEnabled false
     blackedOut false // default
-    url "http://host:port/some-repo"
-    username "remote-repo-user"
-    password "pass"
-    proxy "proxy-ref"
+    url "https://artifactory-edge1-team-c.jfrogdev.co/artifactory/teamc-generic-local"
+    username "admin"
+    password "password" 
   }
+}
