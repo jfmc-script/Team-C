@@ -1,6 +1,18 @@
+repokey = userInput (
+    type : "STRING", // "BOOLEAN", "INTEGER", "INSTANCE", "REPOSITORY"
+    description : "Repository Key",
+    validations : (["cron"])
+  )
 artifactory("Art-1") {
-localRepository("docker-local-a") {
-  packageType "generic"
-  description "My local Docker registry-vvvvvv"
+localRepository(repokey) {
+description "Public description"
+    notes "Some internal notes"
+    includesPattern "**/*" // default
+    excludesPattern "" // default
+    repoLayoutRef "maven-2-default"
+    propertySets // (["ps1", "ps2"])
+    archiveBrowsingEnabled false
+    blackedOut false // default
+    packageType "generic"
 }
 }
