@@ -9,7 +9,7 @@ artifactory(artifactoryToUserInput.name) {
     replication() {
       username "admin"
       password "password"
-	  url "https://artifactory-edge2-team-c.jfrogdev.co/artifactory"
+	  url "https://artifactory-edge2-team-c.jfrogdev.co/artifactory/teamc-generic-local"
       cronExp "0 0/9 14 * * ?"
       socketTimeoutMillis 15000
     }
@@ -17,7 +17,7 @@ artifactory(artifactoryToUserInput.name) {
      replication() {
       username "admin"
       password "password"
-	  url "https://artifactory-edge1-team-d.jfrogdev.co/artifactory"
+	  url "https://artifactory-edge1-team-d.jfrogdev.co/artifactory/teamc-generic-local"
       cronExp "0 0/9 14 * * ?"
       socketTimeoutMillis 15000
     }
