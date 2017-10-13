@@ -1,4 +1,4 @@
-name =userInput (
+input=userInput (
     name : "User Friendly Name", // Optional
     type : "ARTIFACTORY", // "BOOLEAN", "INTEGER", "INSTANCE", "XRAY", "ARTIFACTORY", "REPOSITORY", "PACKAGE_TYPE"
     value : "default value",
@@ -6,7 +6,7 @@ name =userInput (
   
   )
 
-artifactory(name) {
+artifactory(input) {
   localRepository('RT1-maven-local') {
     description userInput
     notes "Some internal notes"
