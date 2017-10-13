@@ -4,7 +4,7 @@ repokeyArt1 = userInput (
     validations : (["cron"])
   )
 
-artifactory("Art-1") {
+artifactory("Art-1") { //Enter the source artifactory node
 localRepository(repokeyArt1) {
 description "Public description"
     notes "Some internal notes"
@@ -19,7 +19,7 @@ description "Public description"
 }
 
 
-artifactory("Art-2") {
+artifactory("Art-2") { //Enter the target/s artifactory. Repeat the artifactory closure for every target in star topology.
 localRepository(repokeyArt1) {
 description "Public description"
     notes "Some internal notes"
