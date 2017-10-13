@@ -1,11 +1,11 @@
-repokey = userInput (
+repokeyArt1 = userInput (
     type : "STRING", // "BOOLEAN", "INTEGER", "INSTANCE", "REPOSITORY"
     description : "Repository Key",
     validations : (["cron"])
   )
 
 artifactory("Art-1") {
-localRepository(repokey) {
+localRepository(repokeyArt1) {
 description "Public description"
     notes "Some internal notes"
     includesPattern "**/*" // default
