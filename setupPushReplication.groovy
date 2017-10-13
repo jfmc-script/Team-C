@@ -5,11 +5,11 @@ artifactoryToUserInput = userInput (
 )
 
 artifactory(artifactoryToUserInput.name) {
-  localRepository("local-repository-key") {
+  localRepository("teamc-generic-local") {
     replication() {
       username "admin"
       password "password"
-	  url "http://localhost:8082/artifactory/bower-local"
+	  url "https://artifactory-edge2-team-c.jfrogdev.co/artifactory"
       cronExp "0 0/9 14 * * ?"
       socketTimeoutMillis 15000
     }
