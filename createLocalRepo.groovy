@@ -3,6 +3,7 @@ repokey = userInput (
     description : "Repository Key",
     validations : (["cron"])
   )
+
 artifactory("Art-1") {
 localRepository(repokey) {
 description "Public description"
