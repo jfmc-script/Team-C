@@ -1,6 +1,7 @@
 artifactoryToUserInput = userInput (
     name : "Input to name artifactory",
     type : "ARTIFACTORY",
+    value:"",
     description : "please provide a to name artifactory"
 )
 
