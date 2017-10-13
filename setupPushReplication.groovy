@@ -1,17 +1,21 @@
-artifactoryToUserInput = userInput (
-    name : "Input to name artifactory",
-    type : "ARTIFACTORY",
-    description : "please provide a name for the artifactory"
-)
+name =userInput (
+    name : "User Friendly Name", // Optional
+    type : "ARTIFACTORY", // "BOOLEAN", "INTEGER", "INSTANCE", "XRAY", "ARTIFACTORY", "REPOSITORY", "PACKAGE_TYPE"
+    value : "default value",
+    description : "please provide a value"
+  
+  )
 
-artifactory(artifactoryToUserInput.name) {
-  localRepository("teamc-generic-local") {
-    replication(artifactoryToUserInput) {
-      username admin
-      password password
-	  url https://artifactory-edge2-team-c.jfrogdev.co/artifactory/
-      cronExp "0 0/9 14 * * ?"
-      socketTimeoutMillis 15000
-    }
+artifactory(name) {
+  localRepository('RT1-maven-local') {
+    description userInput
+    notes "Some internal notes"
+    includesPattern "**/*" // default
+    excludesPattern "" // default
+    repoLayoutRef "maven-2-default"
+    propertySets // (["ps1", "ps2"])
+    archiveBrowsingEnabled false
+    blackedOut false // default
+    packageType "maven"
   }
 }
