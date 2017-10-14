@@ -12,6 +12,6 @@ remoteRepository ('teamc-generic-remote') {
     username "admin"
     password "password" 
     packageType "generic"
-    proxy //
+    proxy "proxy-ref"
   }
 }
