@@ -14,13 +14,13 @@ remoteRepository ('teamc-generic-remote') {
     packageType "generic"
     proxy "proxy-ref"
     socketTimeoutMillis 15000
-  retrievalCachePeriodSecs 43200
-  failedRetrievalCachePeriodSecs 30
-  missedRetrievalCachePeriodSecs 7200
-  unusedArtifactsCleanupEnabled false
-  unusedArtifactsCleanupPeriodHours 0
-  shareConfiguration false
-  synchronizeProperties false
-  enableCookieManagement false
+    retrievalCachePeriodSecs 43200
+    failedRetrievalCachePeriodSecs 30
+    missedRetrievalCachePeriodSecs 7200
+    unusedArtifactsCleanupEnabled false
+    unusedArtifactsCleanupPeriodHours 0
+    shareConfiguration false
+    synchronizeProperties false
+    enableCookieManagement false
   }
 }
